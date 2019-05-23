@@ -11,5 +11,7 @@ Temperatures
 
 ```istats```
 
+```
 alias scroll-on="xset led named \"Scroll Lock\""
 alias scroll-off="xset -led named \"Scroll Lock\""
+```
