@@ -20,9 +20,7 @@ Plugin 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 call vundle#end()            
 filetype plugin indent on
-" to install plugins
-" ::PluginInstall
-" === VUNDLE ===
+" === VUNDLE === to install - ::PluginInstall
 
 " === VIM-PLUG (https://github.com/junegunn/vim-plug) ===
 call plug#begin('~/.vim/plugged')
@@ -30,7 +28,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 call plug#end()
-" === VIM-PLUG ===
+" === VIM-PLUG === to install - PlugInstall
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
