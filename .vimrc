@@ -14,7 +14,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'mileszs/ack.vim'
 Plugin 'vim-syntastic/syntastic'
-Plugin 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plugin 'mxw/vim-jsx'
 
 call vundle#end()            
 filetype plugin indent on
