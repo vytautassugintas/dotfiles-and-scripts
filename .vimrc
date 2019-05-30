@@ -2,7 +2,14 @@ filetype plugin on
 set nocompatible              " be iMproved, required
 set encoding=UTF-8
 set omnifunc=syntaxcomplete#Complete
+set expandtab
+set cursorline
+set showmatch
+set incsearch           " search as characters are entered
+set hlsearch            " highlight matches
+
 "fonts - https://github.com/ryanoasis/nerd-fonts#font-installation
+
 " === VIM-PLUG (https://github.com/junegunn/vim-plug) ===
 call plug#begin('~/.vim/plugged')
 
@@ -24,7 +31,7 @@ let g:ale_sign_error = '❌'
 let g:ale_sign_warning = '⚠️'
 let g:ale_fix_on_save = 1
 "Lint end
-
+let mapleader=","       " leader is comma
 "NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 "
