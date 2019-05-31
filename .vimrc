@@ -20,6 +20,7 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTree' }
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'w0rp/ale'
+Plug 'mileszs/ack.vim'
 call plug#end()
 " === VIM-PLUG === to install - PlugInstall
 
@@ -34,6 +35,11 @@ let g:ale_fix_on_save = 1
 let mapleader=","       " leader is comma
 "NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let g:webdevicons_conceal_nerdtree_brackets = 1
+"
+
+" ack
+let g:ackhighlight=1
 "
 
 let g:quantum_italics=1
@@ -41,7 +47,6 @@ let g:quantum_italics=1
 syntax enable
 
 colorscheme codedark
-
 set termguicolors
 set number
 set mouse=a
