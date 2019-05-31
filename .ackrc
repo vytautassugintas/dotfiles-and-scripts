@@ -22,6 +22,7 @@
 --ignore-dir=__generated__
 
 --ignore-file=is:graphql.schema.js
+--ignore-file=is:graphql.schema.json
 
 
 --type-add=css=scss
