@@ -1,0 +1,15 @@
+{
+    "terminal.integrated.shell.osx": "zsh",
+    "workbench.colorTheme": "One Dark Pro",
+    "terminal.integrated.fontFamily": "Meslo LG L DZ for Powerline",
+    "window.zoomLevel": 0,
+    "javascript.validate.enable": false,
+    "breadcrumbs.enabled": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.minimap.enabled": false,
+    "diffEditor.renderSideBySide": true,
+    "editor.formatOnSave": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+}
+
