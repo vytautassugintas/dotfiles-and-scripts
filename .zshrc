@@ -101,6 +101,7 @@ alias y="yarn"
 alias ys="yarn start"
 alias yd="yarn dev"
 alias yd:d="yarn dev:debug"
+# copy $VPN string to clipboard
 alias vpsw="echo '\U0001F984 \U0001F525 ok \U0001F525 \U0001F984' && echo -n $VPN | pbcopy"
 alias abf="~ && cd projects/app-buyer-finding"
 alias abc="~ && cd projects/app-buyer-commerce"
