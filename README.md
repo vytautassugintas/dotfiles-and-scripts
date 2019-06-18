@@ -1,15 +1,44 @@
-# scripts
+# CLI utilities
 
-weather forecast - `curl wttr.in`
+### Check Current Weather
 
-speed test cli utility - https://github.com/sivel/speedtest-cli
+simply curl [wttr.in](https://github.com/chubin/wttr.in)
 
-Temperatures
+```
+curl wttr.in
+```
 
-```gem install iStats```
+### Interned Speed Test
 
+install [speedtest-cli](https://github.com/sivel/speedtest-cli) utility
 
-```istats```
+```
+pip install speedtest-cli
+```
+
+and run `speedtest-cli` which will show donwload / upload speeds
+
+```
+speedtest-cli
+```
+
+### Check CPU Temperature
+
+Install `iStats`
+
+```
+gem install iStats
+```
+
+then run `istats` and it will show CPU temp and fan speed
+
+```
+istats
+```
+
+# Linux aliases
+
+#### Scroll lock controlls
 
 ```
 alias scroll-on="xset led named \"Scroll Lock\""
