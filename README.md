@@ -44,3 +44,26 @@ istats
 alias scroll-on="xset led named \"Scroll Lock\""
 alias scroll-off="xset -led named \"Scroll Lock\""
 ```
+
+# Dev
+
+#### TS and SCSS compilation with npm scripts
+
+install modules (includes live reload)
+```
+yarn add autoprefixer live-server node-sass nodemon npm-run-all postcss-cli typescript --dev
+```
+
+add to `package.json` scripts
+```
+  "scripts": {
+    "live-server": "live-server --watch=dist,index.html --port=1337",
+    "build-task:scss-compile": "node-sass *.scss -o dist",
+    "build-task:autoprefixer": "postcss dist/*.css --use autoprefixer -d dist",
+    "ts:build": "tsc",
+    "ts:watch": "nodemon -e ts --exec 'yarn ts:build'",
+    "sass:build": "npm-run-all -p build-task:*",
+    "sass:watch": "nodemon -e scss --exec 'yarn sass:build'",
+    "dev": "npm-run-all -p live-server sass:* ts:*"
+  }
+```
