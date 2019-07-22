@@ -89,26 +89,29 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+# -----------------------------------------------------------------------------
+# ALIASES
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+
 alias y="yarn"
 alias ys="yarn start"
 alias yd="yarn dev"
 alias yd:d="yarn dev:debug"
-alias hs='history | grep'
 # copy $VPN string to clipboard
 alias vpsw="echo '\U0001F984 \U0001F525 ok \U0001F525 \U0001F984' && echo -n $VPN | pbcopy"
-alias abf="~ && cd projects/app-buyer-finding"
-alias abc="~ && cd projects/app-buyer-commerce"
-alias aac="~ && cd projects/app-admin-commerce"
-alias dbl="~ && cd projects/dibs-buyer-layout"
-alias gql="~ && cd projects/dibs-graphql"
-alias abm="~ && cd projects/app-buyer-misc"
-alias abt="~ && cd projects/app-buyer-trade"
+
 alias fe="~ && cd projects/ferrum"
+alias abf="fe && cd apps/app-buyer-finding"
+alias abc="fe && cd apps/app-buyer-commerce"
+alias abm="fe && cd apps/app-buyer-misc"
+alias abt="fe && cd apps/app-buyer-trade"
+alias abmc="fe & cd apps/app-buyer-mc"
+alias admc="fe & cd apps/app-dealer-mc"
+alias dbl="fe && cd packages/dibs-buyer-layout"
+
+alias aac="~ && cd projects/app-admin-commerce"
+alias gql="~ && cd projects/dibs-graphql"
+# -----------------------------------------------------------------------------
