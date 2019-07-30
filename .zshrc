@@ -112,6 +112,7 @@ alias abmc="fe & cd apps/app-buyer-mc"
 alias admc="fe & cd apps/app-dealer-mc"
 alias dbl="fe && cd packages/dibs-buyer-layout"
 
-alias aac="~ && cd projects/app-admin-commerce"
+alias aac="fe && cd apps/app-admin-commerce"
 alias gql="~ && cd projects/dibs-graphql"
+alias boot="~ && cd projects/env-boot && ys"
 # -----------------------------------------------------------------------------
