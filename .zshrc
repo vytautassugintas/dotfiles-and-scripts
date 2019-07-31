@@ -101,9 +101,10 @@ alias y="yarn"
 alias ys="yarn start"
 alias yd="yarn dev"
 alias yd:d="yarn dev:debug"
-# copy $VPN string to clipboard
-alias vpsw="echo '\U0001F984 \U0001F525 ok \U0001F525 \U0001F984' && echo -n $VPN | pbcopy"
+
+alias vpsw="echo '\U0001F984 \U0001F525 ok \U0001F525 \U0001F984' && echo -n $VPN | pbcopy" # copy $VPN string to clipboard
 alias vpn="sh /Users/vytautassugintas/personal/dotfiles-and-scripts/vpn-connect.sh"
+alias vpnoff="sh /Users/vytautassugintas/personal/dotfiles-and-scripts/vpn-disconnect.sh"
 
 alias fe="~ && cd projects/ferrum"
 alias abf="fe && cd apps/app-buyer-finding"
@@ -113,7 +114,6 @@ alias abt="fe && cd apps/app-buyer-trade"
 alias abmc="fe & cd apps/app-buyer-mc"
 alias admc="fe & cd apps/app-dealer-mc"
 alias dbl="fe && cd packages/dibs-buyer-layout"
-
 alias aac="fe && cd apps/app-admin-commerce"
 alias gql="~ && cd projects/dibs-graphql"
 alias boot="~ && cd projects/env-boot && ys"
