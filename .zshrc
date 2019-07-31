@@ -6,6 +6,7 @@ export ZSH="/Users/vytautassugintas/.oh-my-zsh"
 
 #VARS
 export VPN="";
+export VPNName="DIBS VPN (Cisco IPSec) "
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
