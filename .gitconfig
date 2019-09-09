@@ -1,0 +1,23 @@
+# This is Git's per-user configuration file.
+
+# Enforce SSH
+[url "ssh://git@github.com/"]
+  insteadOf = https://github.com/
+[url "ssh://git@gitlab.com/"]
+  insteadOf = https://gitlab.com/
+[url "ssh://git@bitbucket.org/"]
+  insteadOf = https://bitbucket.org/
+
+[user]
+name = vytautassugintas
+email = vytautas.sugintas@gmail.com
+pr = !git pull --rebase upstream $(git br-name)
+po = !git push origin $(git br-name)
+pp = !git pr && git po
+
+[filter "lfs"]
+clean = git-lfs clean -- %f
+smudge = git-lfs smudge -- %f
+process = git-lfs filter-process
+required = true
+
