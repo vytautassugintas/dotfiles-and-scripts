@@ -1,4 +1,66 @@
-filetype plugin on
+" fonts - https://github.com/ryanoasis/nerd-fonts#font-installation
+
+
+
+" === PLUGINS (https://github.com/junegunn/vim-plug) ===
+call plug#begin('~/.vim/plugged')
+
+" Swag 
+Plug 'chriskempson/base16-vim'
+Plug 'ryanoasis/vim-devicons'
+
+" JS
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+
+" TS
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+
+Plug 'jparise/vim-graphql'
+
+" Lint
+Plug 'w0rp/ale'
+
+" Esentials
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTree' }
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } "https://github.com/junegunn/fzf
+Plug 'mileszs/ack.vim'  "https://github.com/mileszs/ack.vim
+
+call plug#end()
+" === VIM-PLUG === to install - PlugInstall
+
+
+
+" === KEY MAP ===
+
+let mapleader=","
+
+map <C-f> :FZF<CR>
+map <C-n> :NERDTreeToggle<CR>
+
+" === KEY MAPS ===
+
+
+
+" === INIT ===
+
+autocmd VimEnter * NERDTree
+
+"closes NERDTree if its the only window thats left
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+let g:webdevicons_conceal_nerdtree_brackets = 1
+
+let g:ale_fixers = ['eslint']
+let g:ale_fix_on_save = 1
+" === INIT ====
+
+
+
+" === SETTINGS ===
+
 set nocompatible              " be iMproved, required
 set encoding=UTF-8
 set omnifunc=syntaxcomplete#Complete
@@ -7,47 +69,36 @@ set cursorline
 set showmatch
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
-
-"fonts - https://github.com/ryanoasis/nerd-fonts#font-installation
-
-" === VIM-PLUG (https://github.com/junegunn/vim-plug) ===
-call plug#begin('~/.vim/plugged')
-
-"Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-Plug 'ryanoasis/vim-devicons'
-Plug 'tomasiser/vim-code-dark'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTree' }
-Plug 'mxw/vim-jsx'
-Plug 'pangloss/vim-javascript'
-Plug 'w0rp/ale'
-Plug 'mileszs/ack.vim'
-call plug#end()
-" === VIM-PLUG === to install - PlugInstall
-
-autocmd VimEnter * NERDTree
-
-"Lint
-let g:ale_fixers = {'javascript': ['eslint']}
-let g:ale_sign_error = '❌'
-let g:ale_sign_warning = '⚠️'
-let g:ale_fix_on_save = 1
-"Lint end
-let mapleader=","       " leader is comma
-"NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-let g:webdevicons_conceal_nerdtree_brackets = 1
-"
-
-" ack
-let g:ackhighlight=1
-"
-
-let g:quantum_italics=1
-
-syntax enable
-
-colorscheme codedark
 set termguicolors
 set number
 set mouse=a
 
+filetype plugin on
+syntax enable
+colorscheme base16-ocean
+
+" === SETTINGS ===
+
+
+
+" === AUTOMATION ===
+
+" *** Show current buffer in NERDTreee
+" Check if NERDTree is open or active
+function! IsNERDTreeOpen()
+  return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
+endfunction
+
+" Call NERDTreeFind iff NERDTree is active, current window contains a modifiable
+" file, and we're not in vimdiff
+function! SyncTree()
+  if &modifiable && IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
+    NERDTreeFind
+    wincmd p
+  endif
+endfunction
+
+" Highlight currently open buffer in NERDTree
+autocmd BufEnter * call SyncTree()
+
+" === AUTOMATION ===
