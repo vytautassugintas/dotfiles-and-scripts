@@ -23,6 +23,8 @@
 
 --ignore-file=is:graphql.schema.js
 --ignore-file=is:graphql.schema.json
+--ignore-file=is:yarn.lock
+--ignore-file=is:package.lock
 
 
 --type-add=css=scss
