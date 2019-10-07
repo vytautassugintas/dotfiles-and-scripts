@@ -47,7 +47,7 @@ alias scroll-off="xset -led named \"Scroll Lock\""
 
 # Dev
 
-#### TS and SCSS compilation with npm scripts
+#### TS and SCSS compilation with npm scripts only
 
 install modules (includes live reload)
 ```
