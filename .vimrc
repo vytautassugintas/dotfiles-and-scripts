@@ -46,7 +46,8 @@ map <C-n> :NERDTreeToggle<CR>
 
 " === INIT ===
 
-autocmd VimEnter * NERDTree
+" opens nerdtree together with vim
+"autocmd VimEnter * NERDTree
 
 "closes NERDTree if its the only window thats left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
