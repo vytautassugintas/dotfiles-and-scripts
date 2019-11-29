@@ -1,5 +1,10 @@
 # CLI utilities
 
+### Useful commands
+kill process which runs on given port
+```
+lsof -ti:5200 | xargs kill
+```
 ### Check Current Weather
 
 simply curl [wttr.in](https://github.com/chubin/wttr.in)
