@@ -5,8 +5,6 @@ import iterm2
 fullCmdArguments = sys.argv
 argumentList = fullCmdArguments[1:]
 
-print(argumentList)
-
 
 async def main(connection):
     feApp = argumentList[0]
@@ -14,10 +12,13 @@ async def main(connection):
     window = app.current_terminal_window
     if window is not None:
         await window.async_create_tab()
+
         top_session = app.current_terminal_window.current_tab.current_session
         await top_session.async_send_text(f"" + feApp + "\n")
+
         mid_session = await top_session.async_split_pane(vertical=False)
         await mid_session.async_send_text(f"" + feApp + "\n")
+
         bottom_session = await mid_session.async_split_pane(vertical=False)
         await bottom_session.async_send_text(f"fe\n")
 
