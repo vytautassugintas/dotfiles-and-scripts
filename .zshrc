@@ -98,6 +98,7 @@ eval $(thefuck --alias)
 # For a full list of active aliases, run `alias`.
 
 alias itermPy="~/Library/ApplicationSupport/iTerm2/iterm2env/versions/*/bin/python3"
+alias prepareFe="itermPy /Users/vytautassugintas/personal/dotfiles-and-scripts/prepareFe.py"
 
 alias y="yarn"
 alias ys="yarn start"
