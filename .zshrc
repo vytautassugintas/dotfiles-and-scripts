@@ -97,6 +97,8 @@ eval $(thefuck --alias)
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
+alias itermPy="~/Library/ApplicationSupport/iTerm2/iterm2env/versions/*/bin/python3"
+
 alias y="yarn"
 alias ys="yarn start"
 alias yd="yarn dev"
