@@ -72,3 +72,13 @@ add to `package.json` scripts
     "dev": "npm-run-all -p live-server sass:* ts:*"
   }
 ```
+
+A zsh function to get Chrome's current url:
+
+```
+getURL(){
+  url=$(osascript -e 'tell application "Google Chrome" to return URL of active tab of front window')
+
+  echo $url
+}
+```
