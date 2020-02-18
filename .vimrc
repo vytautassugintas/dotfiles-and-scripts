@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
 " Swag 
 Plug 'chriskempson/base16-vim'
 Plug 'ryanoasis/vim-devicons'
+Plug 'itchyny/lightline.vim'
 
 " JS
 Plug 'mxw/vim-jsx'
@@ -19,18 +20,37 @@ Plug 'peitalin/vim-jsx-typescript'
 
 Plug 'jparise/vim-graphql'
 
+" MD
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+
+" Flow
+Plug 'flowtype/vim-flow'
+
+" Distraction free writing
+Plug 'junegunn/goyo.vim'
+
 " Lint
 Plug 'w0rp/ale'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 " Esentials
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTree' }
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } "https://github.com/junegunn/fzf
 Plug 'mileszs/ack.vim'  "https://github.com/mileszs/ack.vim
+Plug 'Quramy/tsuquyomi'
 
 call plug#end()
 " === VIM-PLUG === to install - PlugInstall
+let ale_linter_aliases = ['javascript', 'vue']
+let g:ale_echo_cursor = 1
+let g:ale_linters_explicit = 1
+let g:ale_linter_aliases = {'jsx': 'javascript'}
+let g:ale_linters = {'javascript': ['flow', 'eslint'], 'jsx': ['flow', 'eslint']}
 
+
+let g:ale_fixers = {'javascript': ['eslint'], 'jsx': ['eslint']}
 
 
 " === KEY MAP ===
@@ -46,15 +66,14 @@ map <C-n> :NERDTreeToggle<CR>
 
 " === INIT ===
 
-" opens nerdtree together with vim
-"autocmd VimEnter * NERDTree
+" autocmd VimEnter * NERDTree
 
 "closes NERDTree if its the only window thats left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 let g:webdevicons_conceal_nerdtree_brackets = 1
 
-let g:ale_fixers = ['eslint']
+"let g:ale_fixers = ['eslint']
 let g:ale_fix_on_save = 1
 " === INIT ====
 
@@ -62,6 +81,7 @@ let g:ale_fix_on_save = 1
 
 " === SETTINGS ===
 
+filetype plugin on
 set nocompatible              " be iMproved, required
 set encoding=UTF-8
 set omnifunc=syntaxcomplete#Complete
@@ -74,7 +94,6 @@ set termguicolors
 set number
 set mouse=a
 
-filetype plugin on
 syntax enable
 colorscheme base16-ocean
 
