@@ -45,7 +45,7 @@ istats
 
 #### Scroll lock controlls
 
-```
+```bash
 alias scroll-on="xset led named \"Scroll Lock\""
 alias scroll-off="xset -led named \"Scroll Lock\""
 ```
@@ -55,12 +55,12 @@ alias scroll-off="xset -led named \"Scroll Lock\""
 #### TS and SCSS compilation with npm scripts only
 
 install modules (includes live reload)
-```
+```bash
 yarn add autoprefixer live-server node-sass nodemon npm-run-all postcss-cli typescript --dev
 ```
 
 add to `package.json` scripts
-```
+```json
   "scripts": {
     "live-server": "live-server --watch=dist,index.html --port=1337",
     "build-task:scss-compile": "node-sass *.scss -o dist",
@@ -75,7 +75,7 @@ add to `package.json` scripts
 
 A zsh function to get Chrome's current url:
 
-```
+```bash
 getURL(){
   url=$(osascript -e 'tell application "Google Chrome" to return URL of active tab of front window')
 
