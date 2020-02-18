@@ -21,8 +21,8 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'jparise/vim-graphql'
 
 " MD
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 
 " Flow
 Plug 'flowtype/vim-flow'
@@ -75,6 +75,8 @@ let g:webdevicons_conceal_nerdtree_brackets = 1
 
 "let g:ale_fixers = ['eslint']
 let g:ale_fix_on_save = 1
+
+let g:vim_markdown_folding_disabled = 1
 " === INIT ====
 
 
