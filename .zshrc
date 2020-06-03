@@ -1,19 +1,15 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/vytautassugintas/.oh-my-zsh"
-
-#VARS
 export VPN="";
-export VPNName="DIBS VPN (Cisco IPSec) "
-
+export VPNName=""
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="spaceship"
 # ZSH_THEME="robbyrussell"
-
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -65,13 +61,15 @@ ZSH_THEME="spaceship"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
+  git 
+  zsh-autosuggestions 
 )
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
 eval $(thefuck --alias)
+# User configuration
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -96,7 +94,6 @@ eval $(thefuck --alias)
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-
 alias itermPy="~/Library/ApplicationSupport/iTerm2/iterm2env/versions/*/bin/python3"
 alias prepareFe="itermPy /Users/vytautassugintas/personal/dotfiles-and-scripts/prepareFe.py"
 
@@ -104,11 +101,11 @@ alias y="yarn"
 alias ys="yarn start"
 alias yd="yarn dev"
 alias yd:d="yarn dev:debug"
-alias sudo="please"
 
-alias vpsw="echo '\U0001F984 \U0001F525 ok \U0001F525 \U0001F984' && echo -n $VPN | pbcopy" # copy $VPN string to clipboard
+alias vpsw="echo '\U0001F984 \U0001F525 ok \U0001F525 \U0001F984' && echo -n $VPN | pbcopy"
 alias vpn="sh /Users/vytautassugintas/personal/dotfiles-and-scripts/vpn-connect.sh"
 alias vpnoff="sh /Users/vytautassugintas/personal/dotfiles-and-scripts/vpn-disconnect.sh"
+alias vpoff="vpnoff"
 
 alias fe="~ && cd projects/ferrum"
 alias abf="fe && cd apps/app-buyer-finding"
@@ -122,3 +119,9 @@ alias aac="fe && cd apps/app-admin-commerce"
 alias gql="~ && cd projects/dibs-graphql"
 alias boot="~ && cd projects/env-boot && ys"
 # -----------------------------------------------------------------------------
+
+alias vim="nvim"
+alias vi="nvim"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/usr/local/opt/node@12/bin:$PATH"
