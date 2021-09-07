@@ -1,15 +1,72 @@
 {
-    "terminal.integrated.shell.osx": "zsh",
-    "workbench.colorTheme": "One Dark Pro",
-    "terminal.integrated.fontFamily": "Meslo LG L DZ for Powerline",
-    "window.zoomLevel": 0,
-    "javascript.validate.enable": false,
-    "breadcrumbs.enabled": true,
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "editor.minimap.enabled": false,
-    "diffEditor.renderSideBySide": true,
-    "editor.formatOnSave": true,
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+  "terminal.integrated.shell.osx": "zsh",
+  "terminal.integrated.fontFamily": "Meslo LG L DZ for Powerline",
+  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "javascript.validate.enable": false,
+  "diffEditor.renderSideBySide": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.suggestSelection": "first",
+  "editor.accessibilitySupport": "off",
+  "editor.dragAndDrop": false,
+  "editor.hover.delay": 750,
+  "editor.lineNumbers": "relative",
+  "editor.renderLineHighlight": "all",
+  "editor.scrollBeyondLastLine": false,
+  "editor.tabCompletion": "on",
+  "editor.minimap.enabled": false,
+  "editor.fontLigatures": true,
+  "vim.debug.silent": true,
+  "workbench.editor.tabSizing": "shrink",
+  "zenMode.hideLineNumbers": false,
+  "zenMode.hideStatusBar": false,
+  "vim.hlsearch": true,
+  "explorer.confirmDragAndDrop": false,
+  "files.enableTrash": false,
+  "files.exclude": {
+    "**/node_modules": true
+  },
+  "gitlens.blame.highlight.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.currentLine.enabled": false,
+  "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSaveTimeout": 1500,
+  "editor.codeActionsOnSaveTimeout": 1500,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  // "prettier.configPath": "/Users/vytautassugintas/projects/ferrum/prettier.config.js",
+  "liveshare.featureSet": "insiders",
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "workbench.sideBar.location": "right",
+  "workbench.activityBar.visible": false,
+  "extensions.ignoreRecommendations": false,
+  // lint
+  "eslint.codeActionsOnSave.mode": "problems",
+  "eslint.packageManager": "yarn",
+  "eslint.run": "onType", // might want to revert in ferrum
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnSave": true
+  // FORMATTER STUFF
+  // "editor.formatOnSave": true,
+  // Disable default formatting (ESLint formatting will be used instead)
+  // "[javascript]": {
+  //   "editor.formatOnSave": false
+  // },
+  // "[javascriptreact]": {
+  //   "editor.formatOnSave": false
+  // },
+  // Auto-fix issues with ESLint when you save code changes
+  // "editor.codeActionsOnSave": {
+  //   "source.fixAll.eslint": true
+  // },
+  // Prevent double-formatting and potential ESLint <> Prettier conflicts (ESLint formatting will be used instead)
+  // "prettier.disableLanguages": [
+  //   "javascript",
+  //   "javascriptreact",
+  //   "typescript",
+  //   "typescriptreact"
+  // ]
 }
-
